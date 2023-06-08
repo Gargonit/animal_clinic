@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Edit animal</title>
+  <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h3 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+            width: 500px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 18px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+<h3>Edit animal</h3>
+<form method="post">
+  <input type="hidden" value="${animal.id}" name="id"/>
+  <label>Name</label>
+  <input name="name" value="${animal.name}" type="text"/>
+  <label>Age</label>
+  <input name="age" value="${animal.age}" type="number" min="0"/>
+  <label>Type</label>
+  <input name="type" value="${animal.type}" type="text"/>
+  <input type="submit" value="Save changes"/>
+</form>
+</body>
+</html>

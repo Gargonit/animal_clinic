@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create animal</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      text-align: center;
+    }
+    h3 {
+      font-size: 24px;
+      margin: 50px 0;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="number"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+<h3>New animal</h3>
+<form method="post">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <label for="price">Price</label>
+  <input type="number" id="price" name="price" min="100" required>
+  <input type="submit" value="Save">
+</form>
+</body>
+</html>
